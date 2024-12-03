@@ -8,7 +8,7 @@ class MenuScreen {
       (this.buttonLogin = "~Login button");
   }
 
-  async accessLoginScreen() {
+  async accessMenuScreen() {
     await $(this.buttonLeftMenu).click();
     await $(this.buttonLeftLogin).click();
   }
