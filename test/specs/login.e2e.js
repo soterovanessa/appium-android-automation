@@ -9,5 +9,8 @@ describe("Login", () => {
     await $("~Username input field").setValue("username");
     await $("~Password input field").setValue("senha");
     await $("~Login button").click();
+    await $(
+      'android=new UiSelector().text("Provided credentials do not match any user in this service.")'
+    ).toHaveText("Provided credentials do not match any user in this service.");
   });
 });
