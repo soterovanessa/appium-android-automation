@@ -12,6 +12,12 @@ class LoginScreen {
     await $(this.fieldPassword).setValue("Password");
     await $(this.buttonLogin).click();
   }
+
+  async accessLoginInvalidScreen() {
+    await $(this.fieldUsername).setValue("bob@example.com");
+    await $(this.fieldPassword).setValue("10203040");
+    await $(this.buttonLogin).click();
+  }
 }
 
 export default new LoginScreen();
